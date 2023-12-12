@@ -1,6 +1,6 @@
 {
   "name": "@kitschpatrol/tweakpane-plugin-profiler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Profiler plugin for Tweakpane 4",
   "main": "dist/tweakpane-plugin-profiler.js",
   "type": "module",

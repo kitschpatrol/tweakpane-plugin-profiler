@@ -1,7 +1,7 @@
 # `@kitschpatrol/tweakpane-plugin-profiler`
 
-**This is a fork of [@0b5vr/tweakpane-plugin-profiler](https://github.com/0b5vr/tweakpane-plugin-profiler) with Tweakpane 4.0 compatibility. It is published to NPM for dependent projects.**
+_**Deprecated. Use [@0b5vr/tweakpane-plugin-profiler](https://github.com/0b5vr/tweakpane-plugin-profiler) instead.**_
 
-Ideally, this fork will be made unecessary when a [PR on the upstream project](https://github.com/0b5vr/tweakpane-plugin-profiler/pull/1) is merged.
+**This was a fork of [@0b5vr/tweakpane-plugin-profiler](https://github.com/0b5vr/tweakpane-plugin-profiler) with Tweakpane 4.0 compatibility. It was published to NPM for dependent projects.**
 
-Please refer to the [upstream project](https://github.com/0b5vr/tweakpane-plugin-profiler) for documentation and other details.
+The fork is no longer necessary since the [PR on the upstream project](https://github.com/0b5vr/tweakpane-plugin-profiler/pull/1) has been merged.
