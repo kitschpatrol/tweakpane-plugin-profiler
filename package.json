@@ -1,6 +1,6 @@
 {
   "name": "@kitschpatrol/tweakpane-plugin-profiler",
-  "version": "1.0.2",
+  "version": "1.4.1",
   "description": "Profiler plugin for Tweakpane 4",
   "main": "dist/tweakpane-plugin-profiler.js",
   "type": "module",
@@ -15,6 +15,7 @@
   },
   "scripts": {
     "prepare": "run-s clean build",
+    "version": "run-s clean build",
     "prepublishOnly": "npm test",
     "start": "run-p watch server",
     "test": "eslint --ext .ts \"src/**/*.ts\"",
