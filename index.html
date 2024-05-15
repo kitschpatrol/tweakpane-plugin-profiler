@@ -11,6 +11,15 @@
         height: 600px;
       }
     </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "tweakpane": "../node_modules/tweakpane/dist/tweakpane.js",
+          "@tweakpane/core": "../node_modules/@tweakpane/core/dist/index.js",
+          "tweakpane-plugin-profiler": "./dist/tweakpane-plugin-profiler.js"
+        }
+      }
+    </script>
   </head>
   <body>
     <textarea id="textareaEditor">// https://github.com/0b5vr/tweakpane-plugin-profiler
@@ -92,8 +101,8 @@ playground.onUnload = () => {
     <script src="https://www.unpkg.com/codemirror@5.62.3/keymap/sublime.js"></script>
     <script src="https://www.unpkg.com/codemirror@5.62.3/mode/javascript/javascript.js"></script>
     <script type="module">
-      import * as Tweakpane from 'https://unpkg.com/tweakpane@4.0.1/dist/tweakpane.js';
-      import * as TweakpaneProfilerBladePlugin from './dist/tweakpane-plugin-profiler.js';
+      import * as Tweakpane from 'tweakpane';
+      import * as TweakpaneProfilerBladePlugin from 'tweakpane-plugin-profiler';
 
       const textareaEditor = document.getElementById( 'textareaEditor' );
       const editor = CodeMirror.fromTextArea( textareaEditor, {
