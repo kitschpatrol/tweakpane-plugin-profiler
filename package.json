@@ -1,7 +1,7 @@
 {
   "name": "@kitschpatrol/tweakpane-plugin-profiler",
   "version": "0.4.1",
-  "description": "Profiler plugin for Tweakpane 4 with externalized dependencies",
+  "description": "A fork of tweakpane-plugin-profiler with build optimizations.",
   "main": "dist/tweakpane-plugin-profiler.js",
   "type": "module",
   "types": "dist/types/index.d.ts",
@@ -13,6 +13,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "keywords": [
+    "npm-package",
+    "tweakpane",
+    "tweakpane-plugin"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kitschpatrol/tweakpane-plugin-profiler.git"
