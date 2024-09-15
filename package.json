@@ -1,6 +1,6 @@
 {
   "name": "@kitschpatrol/tweakpane-plugin-profiler",
-  "version": "0.4.1",
+  "version": "0.4.2-beta.1",
   "description": "A fork of tweakpane-plugin-profiler with build optimizations.",
   "repository": "github:kitschpatrol/tweakpane-plugin-profiler",
   "homepage": "https://0b5vr.com/tweakpane-plugin-profiler/",
