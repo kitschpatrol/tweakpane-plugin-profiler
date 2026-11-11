@@ -1,0 +1,48 @@
+// Import core styles
+@use '@tweakpane/core/lib/sass/tp';
+
+.#{tp.$prefix}-profilerv {
+	position: relative;
+
+	&_root {
+		width: 100%;
+		height: calc(2 * tp.cssVar('container-unit-size'));
+		background-color: tp.cssVar('monitor-bg');
+	}
+
+	&_entryrect {
+		filter: saturate(0.5);
+		rx: tp.cssVar('blade-border-radius');
+		ry: tp.cssVar('blade-border-radius');
+		stroke: transparent;
+		stroke-width: 1px;
+	}
+
+	&_tooltip {
+		position: absolute;
+		top: 0;
+		right: 100%;
+		overflow: hidden;
+		background: tp.cssVar('base-bg');
+	}
+
+	&_tooltipinside {
+		overflow: visible;
+		padding: 0 4px;
+		color: tp.cssVar('input-fg');
+		text-align: right;
+		white-space: pre;
+		background: tp.cssVar('monitor-bg');
+	}
+
+	&_label {
+		overflow: hidden;
+		color: tp.cssVar('monitor-fg');
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	&_entryrect:hover {
+		filter: saturate(1);
+	}
+}

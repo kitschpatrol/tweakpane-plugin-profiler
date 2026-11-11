@@ -1,16 +1,16 @@
-import { ProfilerBladePlugin } from './ProfilerBladePlugin.js';
-import type { TpPlugin } from 'tweakpane';
+import type { TpPlugin } from 'tweakpane'
+import { ProfilerBladePlugin } from './profiler-blade-plugin'
+import pluginCss from './styles/plugin.scss?inline'
 
 // TODO evaluate need for these exports
-export { ProfilerBladeDefaultMeasureHandler } from './ProfilerBladeDefaultMeasureHandler.js';
-export type { ProfilerBladeMeasureHandler } from './ProfilerBladeMeasureHandler.js';
-export { ProfilerBladePlugin } from './ProfilerBladePlugin.js';
-export { ProfilerBladePlugin as plugin } from './ProfilerBladePlugin.js';
+export { ProfilerBladeDefaultMeasureHandler } from './profiler-blade-default-measure-handler'
+export type { ProfilerBladeMeasureHandler } from './profiler-blade-measure-handler'
+export { ProfilerBladePlugin } from './profiler-blade-plugin'
 
-export const id = 'profiler';
+export const id = 'profiler'
 
-export const css = '__css__';
+export const css: string = pluginCss
 
-export const plugins: TpPlugin[] = [
-  ProfilerBladePlugin,
-];
+export const plugins: TpPlugin[] = [ProfilerBladePlugin]
+
+export { ProfilerBladePlugin as plugin } from './profiler-blade-plugin'
