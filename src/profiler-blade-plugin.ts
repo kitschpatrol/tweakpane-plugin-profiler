@@ -38,6 +38,11 @@ function parseMeasureHandler(value: unknown): ProfilerBladeMeasureHandler | unde
 
 export const ProfilerBladePlugin: BladePlugin<ProfilerBladePluginParams> = createPlugin({
 	accept(params: Record<string, unknown>) {
+		// Reject other blades before parsing, since parsing the measure handler can log a warning
+		if (params.view !== 'profiler') {
+			return null
+		}
+
 		const result = parseRecord<ProfilerBladePluginParams>(params, (p) => ({
 			bufferSize: p.optional.number,
 			calcMode: p.optional.custom(parseCalcMode),
