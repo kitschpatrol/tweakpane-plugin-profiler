@@ -42,7 +42,9 @@
 		white-space: nowrap;
 	}
 
-	&_entryrect:hover {
-		filter: saturate(1);
+	@media (hover: hover) {
+		&_entryrect:hover {
+			filter: saturate(1);
+		}
 	}
 }
