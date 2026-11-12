@@ -5,13 +5,44 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.4.2-fork.2] - 2026-11-11
+
+### Added
+
+- Add a `/lite` export and minified lite build that import `@tweakpane/core` for sharing across plugins.
+- Export `ProfilerBladeApi` and `ProfilerBladePluginParams` types from the package entry.
+
+### Changed
+
+- Bundle `@tweakpane/core` in the default and minified builds; use `/lite` to retain externalized core imports.
+- **Breaking:** Restrict package entry points to the root, `/lite`, and `/package.json`, consolidate declarations, and mark the package side-effect-free.
+- **Breaking:** Raise the browser JavaScript build target from ES2015 to ES2022.
+- **Breaking:** Restrict declared Node.js support to 18, 20, 22, 24, and 26 or newer.
+- **Breaking:** Change `ProfilerBladeMeasureHandler` from an interface to a type alias, removing declaration-merging support.
+
+### Fixed
+
+- Skip legacy measure-handler warnings for blades belonging to other plugins.
+- Apply hover highlighting to profiler bars only on devices that support hover.
+- Report a clear error when `measureEnd()` is called without a matching `measureStart()`.
+- Correct the exported `css` type to `string` instead of the stylesheet placeholder literal.
+
+### Documentation
+
+- Add installation and registration examples, explain bundled and `/lite` imports and core dependencies, and document contributor workflows.
 
 ### Maintenance
 
 - Update the pinned pnpm version to 12.16.1.
 - Update the GitHub release and release-note actions.
 - Update npm publishing to obtain a one-time password through the 1Password CLI.
+- Migrate JavaScript, SCSS, and declaration builds to `tsdown`, validate packages with `publint` and Are the Types Wrong, and serve the demo with Vite.
+- Adopt `@kitschpatrol/shared-config` and `ksc` for linting and formatting, refactor internal modules, and refresh editor tasks.
+- Add Vitest coverage for plugin registration, measurement APIs, rendering, disposal, and calculation utilities.
+- Add build, lint, and test CI on Linux, macOS, and Windows.
+- Add monthly and manually triggered dependency-update automation.
+- Integrate `chagent` into release commits and build after version bumps before publishing.
+- Refresh development dependencies and repository actions, and update the pinned pnpm version to 12.18.0.
 
 ## [0.4.2-fork.1] - 2026-10-15
 
@@ -173,7 +204,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Establish the TypeScript, Rollup, Sass, linting, development-watch, and cross-platform cleanup toolchain.
 
-[Unreleased]: https://github.com/kitschpatrol/tweakpane-plugin-profiler/compare/0.4.2-fork.1...HEAD
 [0.1.0]: https://github.com/kitschpatrol/tweakpane-plugin-profiler/releases/tag/v0.1.0
 [0.1.1]: https://github.com/kitschpatrol/tweakpane-plugin-profiler/compare/v0.1.0...v0.1.1
 [0.1.2]: https://github.com/kitschpatrol/tweakpane-plugin-profiler/compare/v0.1.1...v0.1.2
@@ -185,3 +215,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [0.4.2-beta.2]: https://github.com/kitschpatrol/tweakpane-plugin-profiler/compare/0.4.2-beta.1...0.4.2-beta.2
 [0.4.2-beta.3]: https://github.com/kitschpatrol/tweakpane-plugin-profiler/compare/0.4.2-beta.2...0.4.2-beta.3
 [0.4.2-fork.1]: https://github.com/kitschpatrol/tweakpane-plugin-profiler/compare/0.4.2-beta.3...0.4.2-fork.1
+[0.4.2-fork.2]: https://github.com/kitschpatrol/tweakpane-plugin-profiler/compare/0.4.2-fork.1...0.4.2-fork.2
